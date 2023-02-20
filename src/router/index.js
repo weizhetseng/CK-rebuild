@@ -52,6 +52,12 @@ const router = createRouter({
       component: () => import('../views/ShoppingCart.vue')
     },
     {
+      //會員專區(登入頁面)
+      path: '/login',
+      name: 'login',
+      component: () => import('../views/Login.vue')
+    },
+    {
       //會員專區
       path: '/memberCenter',
       name: 'memberCenter',

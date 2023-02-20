@@ -1,16 +1,11 @@
 <script setup>
 import { RouterLink, RouterView } from 'vue-router'
+import btn_footer from './components/btn_footer.vue';
+import btn_header from './components/btn_header.vue';
 </script>
 
 <template>
-  <nav>
-    <RouterLink to="/">首頁</RouterLink>
-    <RouterLink to="/news">最新消息</RouterLink>
-    <RouterLink to="/about">關於我們</RouterLink>
-    <RouterLink to="/about">線上購物</RouterLink>
-    <RouterLink to="/location">營業據點</RouterLink>
-    <RouterLink to="/shoppingCart">購物車</RouterLink>
-    <RouterLink to="/MemberCenter">會員專區</RouterLink>
-  </nav>
+  <btn_header></btn_header>
   <RouterView />
+  <btn_footer></btn_footer>
 </template>

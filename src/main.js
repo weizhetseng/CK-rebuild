@@ -11,6 +11,7 @@ import VueAxios from 'vue-axios'
 //引入 bootstrap、scss 樣式
 import 'bootstrap'
 import 'bootstrap/dist/css/bootstrap.min.css'
+import './assets/scss/fontAwesome6.css'
 import './assets/scss/all.scss'
 
 //引入 vee-validate 套件
