@@ -1,0 +1,1 @@
+import{_ as e,o as t,c,a as s}from"./index-6fb84f09.js";const n={},o=s("h1",null,"This is member-center page",-1),r=[o];function a(_,i){return t(),c("div",null,r)}const d=e(n,[["render",a]]);export{d as default};

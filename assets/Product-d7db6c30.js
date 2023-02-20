@@ -1,1 +1,0 @@
-import{_ as e,o as c,c as o,a as s}from"./index-5e367942.js";const t={},n=s("h1",null,"This is product pages",-1),r=[n];function a(_,d){return c(),o("div",null,r)}const l=e(t,[["render",a]]);export{l as default};
