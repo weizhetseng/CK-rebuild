@@ -1,0 +1,1 @@
+import{_ as e,o,c as s,a as t}from"./index-65313d7f.js";const c={},n=t("h1",null,"This is shoppingCart page",-1),a=[n];function r(_,i){return o(),s("div",null,a)}const l=e(c,[["render",r]]);export{l as default};
