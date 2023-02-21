@@ -2,7 +2,11 @@ nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    position: relative;
+    position: fixed;
+    background: #fff;
+    z-index: 1000;
+    width: 100%;
+    top: 0;
 
     h1 {
         a {
@@ -23,10 +27,13 @@ nav {
         .normalLink {
             display: flex;
             align-items: center;
+            margin-right: 80px;
+            gap: 25px;
 
             a {
                 display: block;
                 font-size: 18px;
+                font-weight: bold;
                 color: #000;
             }
         }
@@ -40,6 +47,7 @@ nav {
                 display: flex;
                 align-items: center;
                 justify-content: center;
+                padding: 5px;
 
                 &:first-child {
                     background: #000;
@@ -66,75 +74,47 @@ nav {
         }
     }
 
-    .hamNav {
+    .hamBtn {
         display: none;
-        width: 30px;
-        height: 2px;
-        background: #000;
+        position: absolute;
+        width: 40px;
+        height: 30px;
+        left: 20px;
+        padding: 0;
+        background: transparent;
+        border-radius: 5px;
+        border: none;
+        transition: 0.6s;
 
-        &::before {
-            content: "";
-            display: block;
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            background: #000;
-            transform: rotate(0deg) translateY(10px);
-        }
-
-        &::after {
-            content: '';
-            display: block;
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            background: #000;
-            transform: rotate(0deg) translateY(-10px);
-        }
-
-        &.active {
-            width: 30px;
+        .ham {
+            width: 28px;
             height: 2px;
-            background: transparent;
-            transition: all 500ms cubic-bezier(0.680, -0.550, 0.265, 1.550);
+            background: rgb(32, 32, 32);
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
 
             &::before {
+                content: '';
                 position: absolute;
-                content: "";
                 display: block;
-                width: 100%;
-                height: 100%;
-                background: #000;
-                transform: rotate(45deg);
-                transition: all 500ms cubic-bezier(0.680, -0.550, 0.265, 1.550);
+                width: 28px;
+                height: 2px;
+                background: rgb(32, 32, 32);
+                transform: rotate(0deg) translateY(-7px);
+
             }
 
             &::after {
-                position: absolute;
                 content: '';
+                position: absolute;
                 display: block;
-                width: 100%;
-                height: 100%;
-                background: #000;
-                transform: rotate(-45deg);
-                transition: all 500ms cubic-bezier(0.680, -0.550, 0.265, 1.550);
+                width: 28px;
+                height: 2px;
+                background: rgb(32, 32, 32);
+                transform: rotate(0deg) translateY(7px);
             }
-        }
-
-    }
-
-    .mobileNav {
-        border: 1px solid #000;
-        position: absolute;
-        width: 300px;
-        height: 100vh;
-        top: 0%;
-        left: -300px;
-        transition: 0.5s;
-        z-index: 99;
-
-        &.active {
-            left: 0%;
         }
     }
 
@@ -147,8 +127,150 @@ nav {
             display: none;
         }
 
-        .hamNav {
+        .hamBtn {
             display: block;
+        }
+    }
+}
+
+.mobilewrap {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background: transparent;
+
+    &.active {
+        z-index: 1001;
+        background: rgba($color: #000000, $alpha: 0.5);
+    }
+}
+
+.mobileNav {
+    width: 40%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: -50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: #fff;
+    z-index: 10002;
+    transition: 0.5s;
+    padding: 50px 30px 30px 30px;
+    overflow-y: auto;
+
+    &.active {
+        left: 0;
+    }
+
+    @include sm {
+        width: 70%;
+        left: -70%;
+        padding: 30px 10px 10px 10px;
+    }
+
+    label {
+        position: relative;
+        width: 100%;
+        margin-bottom: 20px;
+
+        input {
+            width: 100%;
+            border: none;
+            background: #f7eedd;
+            padding: 15px;
+            border-radius: 10px;
+
+            &:focus {
+                outline: 1px solid #f0a00c;
+            }
+        }
+
+        i {
+            position: absolute;
+            top: 50%;
+            right: 10px;
+            transform: translateY(-50%);
+        }
+    }
+
+    ul {
+        .page_link {
+            padding: 0 15px;
+            margin: 35px 0;
+            font-size: 18px;
+            margin-bottom: 20px;
+            color: #A02C2C;
+
+            .drop_link {
+                display: flex;
+                justify-content: space-between;
+
+                &::after {
+                    font-family: "Font Awesome 6 Free";
+                    font-weight: 900;
+                    content: "\f105";
+                    font-size: 14px;
+                }
+
+                &.show::after {
+                    content: "\f078";
+                }
+            }
+
+            .dropdown-menu {
+                position: static !important;
+                transform: none !important;
+                border: none;
+
+                .dropdown-item {
+                    padding: 0 0 0 10px;
+                    margin: 10px 0;
+                }
+            }
+        }
+
+        &:last-child {
+            .down_link {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                border-radius: 10px;
+                padding: 15px;
+                margin: 20px 0;
+                width: 100%;
+                color: #fff;
+            }
+
+            .link1 {
+                background: #A02C2C;
+            }
+
+            .link2 {
+                position: relative;
+                background: #b4a27f;
+
+                span {
+                    position: absolute;
+                    width: 15px;
+                    height: 15px;
+                    border-radius: 50%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    color: #fff;
+                    background: #A02C2C;
+                    top: 10px;
+                    right: 5px;
+                }
+            }
+
+            .link3 {
+                background: #000;
+            }
         }
     }
 }

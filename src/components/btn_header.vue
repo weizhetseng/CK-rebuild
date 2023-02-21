@@ -1,7 +1,7 @@
 <template>
     <nav>
-        <button class="hamBtn" type="button">
-            <div class="hamNav" :class="{ active: hamToggle }" @click.prevent="toggleHam()"></div>
+        <button class="hamBtn" type="button" @click="toggleHam()">
+            <div class="ham"></div>
         </button>
         <h1>
             <a href="#">垂坤食品有限公司</a>
@@ -45,77 +45,76 @@
                 </li>
             </ul>
         </div>
-
-        <div class="mobileNav" :class="{ active: hamToggle }"></div>
     </nav>
-<!-- <div class="mobileNav d-flex flex-column flex-shrink-0 p-3 bg-light" style="width: 280px;height: 100vh;">
-        <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
-            <svg class="bi me-2" width="40" height="32">
-                <use xlink:href="#bootstrap"></use>
-            </svg>
-            <span class="fs-4">Sidebar</span>
-        </a>
-        <hr>
-        <ul class="nav nav-pills flex-column mb-auto">
-            <li class="nav-item">
-                <a href="#" class="nav-link active" aria-current="page">
-                    <svg class="bi me-2" width="16" height="16">
-                        <use xlink:href="#home"></use>
-                    </svg>
-                    Home
-                </a>
-            </li>
-            <li>
-                <a href="#" class="nav-link link-dark">
-                    <svg class="bi me-2" width="16" height="16">
-                        <use xlink:href="#speedometer2"></use>
-                    </svg>
-                    Dashboard
-                </a>
-            </li>
-            <li>
-                <a href="#" class="nav-link link-dark">
-                    <svg class="bi me-2" width="16" height="16">
-                        <use xlink:href="#table"></use>
-                    </svg>
-                    Orders
-                </a>
-            </li>
-            <li>
-                <a href="#" class="nav-link link-dark">
-                    <svg class="bi me-2" width="16" height="16">
-                        <use xlink:href="#grid"></use>
-                    </svg>
-                    Products
-                </a>
-            </li>
-            <li>
-                <a href="#" class="nav-link link-dark">
-                    <svg class="bi me-2" width="16" height="16">
-                        <use xlink:href="#people-circle"></use>
-                    </svg>
-                    Customers
-                </a>
-            </li>
-        </ul>
-        <hr>
-        <div class="dropdown">
-            <a href="#" class="d-flex align-items-center link-dark text-decoration-none dropdown-toggle" id="dropdownUser2"
-                data-bs-toggle="dropdown" aria-expanded="false">
-                <img src="https://github.com/mdo.png" alt="" width="32" height="32" class="rounded-circle me-2">
-                <strong>mdo</strong>
-            </a>
-            <ul class="dropdown-menu text-small shadow" aria-labelledby="dropdownUser2">
-                <li><a class="dropdown-item" href="#">New project...</a></li>
-                <li><a class="dropdown-item" href="#">Settings</a></li>
-                <li><a class="dropdown-item" href="#">Profile</a></li>
-                <li>
-                    <hr class="dropdown-divider">
+    <div class="mobilewrap" :class="{ active: hamToggle }" @click="toggleHam()"></div>
+    <div class="mobileNav" :class="{ active: hamToggle }">
+        <div>
+            <label for="search">
+                <input id="search" type="text" placeholder="關鍵字商品搜尋" />
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </label>
+            <ul>
+                <li class="page_link">
+                    <RouterLink to="/news" class="nav-link drop_link" id="dropdownMenuButton1" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        最新消息
+                    </RouterLink>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                        <li v-for="item in news_link" :key="item.title" @click="openMenu()">
+                            <RouterLink class="dropdown-item" :to="item.url">{{
+                                item.title
+                            }}</RouterLink>
+                        </li>
+                    </ul>
                 </li>
-                <li><a class="dropdown-item" href="#">Sign out</a></li>
+                <li class="page_link">
+                    <RouterLink to="/about" class="nav-link" @click="openMenu()">關於垂坤</RouterLink>
+                </li>
+                <li class="page_link">
+                    <RouterLink to="/shop_method-1" class="nav-link drop_link" id="dropdownMenuButton1"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        線上購物
+                    </RouterLink>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                        <li v-for="item in product_links" :key="item.title" @click="openMenu()">
+                            <RouterLink class="dropdown-item" :to="item.url">{{
+                                item.title
+                            }}</RouterLink>
+                        </li>
+                    </ul>
+                </li>
+                <li class="page_link">
+                    <RouterLink to="/location" class="nav-link" @click="openMenu()">營業據點</RouterLink>
+                </li>
+                <li class="page_link">
+                    <a href="" class="nav-link" @click="openMenu()">訂單下載</a>
+                </li>
             </ul>
         </div>
-    </div> --></template>
+
+        <ul>
+            <li>
+                <RouterLink to="/login" class="down_link link1" @click="openMenu()">
+                    會員專區
+                    <img src="../assets/image/other/user-alert.png" alt="" />
+                </RouterLink>
+            </li>
+            <li>
+                <RouterLink to="/shoppingcart" class="down_link link2" @click="openMenu()">
+                    購物車
+                    <img src="../assets/image/other/cart.png" alt="" />
+                    <span>0</span>
+                </RouterLink>
+            </li>
+            <li>
+                <RouterLink to="" data-bs-toggle="modal" data-bs-target="#liar" class="down_link link3" @click="openMenu()">
+                    詐騙手法大公開
+                    <img src="../assets/image/other/user.png" alt="" />
+                </RouterLink>
+            </li>
+        </ul>
+    </div>
+</template>
 
 
 
