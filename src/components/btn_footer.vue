@@ -6,7 +6,7 @@
                 <div class="col-lg-4 pageLink">
                     <RouterLink v-for="item in pageLink" :to="item.url" :key="item.url">{{ item.title }}</RouterLink>
                 </div>
-                <div class="col-lg-4 offset-xl-1 contactLink">
+                <div class="col-xl-4 col-lg-5 offset-xl-1 contactLink">
                     <ul>
                         <li>
                             <p>客服專線:</p>
