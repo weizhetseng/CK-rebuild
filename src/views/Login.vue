@@ -32,7 +32,6 @@
                     </div>
                     <button type="submit">登入</button>
                 </Form>
-
             </div>
             <div class="col-6 registerForm">
                 <div class="pageTitle">
