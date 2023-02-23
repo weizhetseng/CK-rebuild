@@ -1,6 +1,8 @@
 <template>
-  <div class="container">
+  <pageBanner />
 
+  <div class="container">
+    <breadcrumb />
     <div class="pageTitle">
       <h2>關於垂坤</h2>
       <p>ABOUT US</p>
@@ -35,3 +37,9 @@
     </div>
   </div>
 </template>
+
+
+<script setup>
+import breadcrumb from '../components/btn_breadcrumb.vue'
+import pageBanner from '../components/btn_pageBanner.vue'
+</script>

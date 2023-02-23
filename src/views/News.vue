@@ -1,5 +1,12 @@
 <template>
-    <div>
-        <h1>This is news page</h1>
+    <pageBanner />
+    <div class="container">
+        <breadcrumb />
     </div>
 </template>
+
+
+<script setup>
+import breadcrumb from '../components/btn_breadcrumb.vue'
+import pageBanner from '../components/btn_pageBanner.vue'
+</script>

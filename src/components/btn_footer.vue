@@ -21,11 +21,8 @@
                         </li>
                     </ul>
                 </div>
-
             </div>
-
         </div>
-
         <div class="copyRight">
             <p>垂坤食品有限公司 © 2022 All Rights Reserved.</p>
         </div>
@@ -60,4 +57,3 @@ const pageLink = [
     },
 ]
 </script>
-  
