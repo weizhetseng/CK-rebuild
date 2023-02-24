@@ -1,0 +1,49 @@
+.register {
+    margin-bottom: 70px;
+
+    .pageTitle {
+        margin-bottom: 10px;
+    }
+
+    form {
+        width: 60%;
+        margin: 0 auto;
+
+        p {
+            color: #FF0000;
+            font-size: 15px;
+            margin-bottom: 10px;
+        }
+
+        .inputArea {
+            margin-bottom: 20px;
+
+            &>label {
+                gap: 0px;
+
+                span {
+                    color: #FF0000;
+                }
+            }
+        }
+
+        .addressArea {
+            margin-bottom: 80px;
+        }
+    }
+
+    @include lg {
+        form {
+            width: 100%;
+        }
+    }
+
+    @include xs {
+        .addressArea {
+            .inputArea {
+                margin-bottom: 0px;
+            }
+        }
+    }
+
+}

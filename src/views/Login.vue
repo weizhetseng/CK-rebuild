@@ -9,7 +9,7 @@
                         <h2>會員登入</h2>
                         <p>Member Login</p>
                     </div>
-                    <Form v-slot="{ errors }" @submit.prevent="">
+                    <Form v-slot="{ errors }" @submit="GoMemterCenter()">
                         <div class="inputArea">
                             <label for="userID"><i class="fa-solid fa-envelope"></i>帳號</label>
                             <Field id="userID" name="userID" type="text" label="帳號"
@@ -18,7 +18,7 @@
                             <error-message name="userID" class="invalid-feedback"></error-message>
                         </div>
                         <div class="inputArea">
-                            <label for="userID"><i class="fa-solid fa-key"></i>密碼</label>
+                            <label for="userPW"><i class="fa-solid fa-key"></i>密碼</label>
                             <Field id="userPW" name="userPW" type="password" label="密碼"
                                 :class="{ 'is-invalid': errors['userPW'] }" placeholder="請輸入密碼" rules="required">
                             </Field>
@@ -114,7 +114,7 @@
                             </li>
                         </ol>
                     </div>
-                    <Form v-slot="{ errors }" @submit.prevent="">
+                    <Form v-slot="{ errors }" @submit="GoRegister()">
                         <div>
                             <Field id="termsCheckbox" name="termsCheckbox" :value="true" type="checkbox" label="會員條款"
                                 :class="{ 'is-invalid': errors['termsCheckbox'] }" rules="required">
@@ -133,4 +133,14 @@
 <script setup>
 import breadcrumb from '../components/btn_breadcrumb.vue'
 import pageBanner from '../components/btn_pageBanner.vue'
+import { useRoute, useRouter } from 'vue-router'
+const router = useRouter()
+
+function GoMemterCenter() {
+    router.push('/memberCenter')
+}
+
+function GoRegister() {
+    router.push('/register')
+}
 </script>

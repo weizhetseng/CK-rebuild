@@ -81,3 +81,126 @@ a {
 .pageBanner {
     margin-bottom: 50px;
 }
+
+
+//輸入框樣式(有icon)
+.addressArea {
+    input {
+        width: calc(100% - 130px);
+        border: none;
+        border-radius: 5px;
+        box-shadow: 0 3px 10px rgba($color: #000000, $alpha: 0.16);
+        padding: 5px;
+        margin-left: 130px;
+    }
+
+    @include sm {
+        input {
+            margin-left: 0;
+            width: 100%;
+        }
+    }
+}
+
+.inputArea {
+    display: flex;
+    position: relative;
+
+
+    .invalid-feedback {
+        position: absolute;
+        bottom: -20px;
+        text-align: right;
+    }
+
+    &>label {
+        width: 100px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        border-right: 1px solid #707070;
+        margin-right: 30px;
+
+        i {
+            color: #A02C2C;
+            border: 1px solid #A02C2C;
+            border-radius: 50%;
+            padding: 8px;
+        }
+    }
+
+    &>input {
+        width: calc(100% - 130px);
+        border: none;
+        border-bottom: 1px solid #999999;
+        outline: none;
+    }
+
+    input[type="date"] {
+        width: 220px;
+        box-shadow: 0px 3px 10px rgba($color: #000000, $alpha: 0.16);
+        padding: 10px;
+        border-radius: 5px;
+        border: none;
+        background: url("/src/assets/image/other/calendar.png") no-repeat right 10px center;
+        background-size: 20px 20px;
+
+        &::-webkit-calendar-picker-indicator {
+            background: transparent;
+        }
+    }
+
+    .sex {
+        display: flex;
+        gap: 30px;
+    }
+
+    .selectGroup {
+        width: calc(100% - 130px);
+        display: flex;
+        justify-content: space-between;
+
+        select {
+            width: 32%;
+            border: none;
+            border-radius: 5px;
+            box-shadow: 0 3px 10px rgba($color: #000000, $alpha: 0.16);
+            padding: 5px;
+        }
+    }
+
+
+
+
+    @include sm {
+        flex-direction: column;
+
+
+        .selectGroup {
+            width: 100%;
+        }
+
+        &>label {
+            border-right: none;
+            margin-bottom: 20px;
+        }
+
+        &>input {
+            width: 100%;
+        }
+
+    }
+
+    @include xs {
+        .selectGroup {
+            flex-direction: column;
+
+
+            select {
+                width: 100%;
+                margin-bottom: 10px;
+            }
+        }
+
+    }
+}

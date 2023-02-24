@@ -82,15 +82,35 @@ const router = createRouter({
       }
     },
     {
+      //舊會員手機認證
+      path: '/phoneCaptcha',
+      name: 'phoneCaptcha',
+      component: () => import('../views/PhoneCaptcha.vue'),
+      meta: {
+        banner: "banner-member.jpg",
+        breadcrumb: ["會員專區"]
+      }
+    },
+    {
       //忘記密碼
       path: '/forgetPW',
       name: 'forgetPW',
       component: () => import('../views/ForgetPW.vue'),
       meta: {
-        banner: "banner-login.jpg",
+        banner: "banner-member.jpg",
         breadcrumb: [
           "會員專區", "忘記密碼"
         ]
+      }
+    },
+    {
+      //忘記密碼
+      path: '/register',
+      name: 'register',
+      component: () => import('../views/Register.vue'),
+      meta: {
+        banner: "banner-member.jpg",
+        breadcrumb: ["會員註冊"]
       }
     },
     {
@@ -100,7 +120,47 @@ const router = createRouter({
       component: () => import('../views/MemberCenter.vue'),
       meta: {
         banner: "banner-member.jpg",
-      }
+        breadcrumb: ["會員專區"]
+      },
+      children: [
+        {
+          //查詢訂單
+          path: 'orderSearch',
+          component: () => import('../views/OrderSearch.vue'),
+          meta: {
+            banner: "banner-member.jpg",
+            breadcrumb: ["會員專區", "查詢訂單資料"]
+          },
+        },
+        {
+          //修改資料
+          path: 'updateUser',
+          component: () => import('../views/UpdateUser.vue'),
+          meta: {
+            banner: "banner-member.jpg",
+            breadcrumb: ["會員專區", "修改會員資料"]
+          },
+        },
+        {
+          //變更密碼
+          path: 'changePW',
+          component: () => import('../views/ChangePW.vue'),
+          meta: {
+            banner: "banner-member.jpg",
+            breadcrumb: ["會員專區", "變更會員密碼"]
+          },
+        },
+        {
+          //綁定其他
+          path: 'bindOther',
+          component: () => import('../views/BindOther.vue'),
+          meta: {
+            banner: "banner-member.jpg",
+            breadcrumb: ["會員專區", "綁定其他帳號"]
+          },
+        },
+
+      ]
     },
   ]
 })
