@@ -28,7 +28,7 @@ const router = createRouter({
       ],
       meta: {
         banner: "banner-news.jpg",
-        breadcrumb: "最新消息"
+        breadcrumb: ["最新消息"]
       }
     },
     {
@@ -38,7 +38,7 @@ const router = createRouter({
       component: () => import('../views/About.vue'),
       meta: {
         banner: "banner-about.jpg",
-        breadcrumb: "關於我們"
+        breadcrumb: ["關於我們"]
       }
     },
     {
@@ -48,7 +48,7 @@ const router = createRouter({
       component: () => import('../views/Product.vue'),
       meta: {
         banner: "banner-shopping.jpg",
-        breadcrumb: "線上購物"
+        breadcrumb: ["線上購物"]
       }
     },
     {
@@ -58,7 +58,7 @@ const router = createRouter({
       component: () => import('../views/Location.vue'),
       meta: {
         banner: "banner-location.jpg",
-        breadcrumb: "營業據點"
+        breadcrumb: ["營業據點"]
       }
     },
     {
@@ -68,7 +68,7 @@ const router = createRouter({
       component: () => import('../views/ShoppingCart.vue'),
       meta: {
         banner: "banner-cart.jpg",
-        breadcrumb: "購物車"
+        breadcrumb: ["購物車"]
       }
     },
     {
@@ -78,7 +78,7 @@ const router = createRouter({
       component: () => import('../views/Login.vue'),
       meta: {
         banner: "banner-login.jpg",
-        breadcrumb: "會員登入"
+        breadcrumb: ["會員登入"]
       }
     },
     {
@@ -88,6 +88,9 @@ const router = createRouter({
       component: () => import('../views/ForgetPW.vue'),
       meta: {
         banner: "banner-login.jpg",
+        breadcrumb: [
+          "會員專區", "忘記密碼"
+        ]
       }
     },
     {

@@ -7,6 +7,7 @@
 
 
 
+
     .loginForm {
         form {
             padding-right: 40px;
@@ -113,18 +114,59 @@
             div {
                 position: relative;
                 margin-bottom: 45px;
+                display: flex;
+                gap: 5px;
             }
+
 
             .invalid-feedback {
                 position: absolute;
-                bottom: 0;
                 text-align: right;
+                bottom: 0;
                 z-index: -1;
             }
 
             button {
                 display: block;
                 margin: 0 auto;
+            }
+        }
+    }
+
+    @include lg {
+        .loginForm {
+            margin-bottom: 40px;
+
+            form {
+                padding-right: 0px;
+            }
+        }
+    }
+
+    @include sm {
+        .loginForm {
+            .inputArea {
+                flex-direction: column;
+
+                label {
+                    border-right: none;
+                    margin-bottom: 20px;
+                }
+
+                input {
+                    width: 100%;
+                }
+            }
+        }
+
+        .registerForm {
+            form {
+                .invalid-feedback {
+                    position: absolute;
+                    text-align: right;
+                    bottom: -20px;
+                    z-index: -1;
+                }
             }
         }
     }

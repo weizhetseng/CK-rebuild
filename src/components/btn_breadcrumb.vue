@@ -1,10 +1,9 @@
 <template>
     <ul class="breadcrumb">
         <li>
-            <RouterLink to="/">home</RouterLink>
+            <RouterLink to="/"><img src="../assets/image/other/home.png" alt=""></RouterLink>
         </li>
-        <li><i class="fa-solid fa-chevron-right"></i></li>
-        <li class="active">{{ route.meta.breadcrumb }}</li>
+        <li v-for="item in route.meta.breadcrumb">{{ item }}</li>
     </ul>
 </template>
 
@@ -12,5 +11,4 @@
 import { useRoute, useRouter } from 'vue-router';
 const router = useRouter()
 const route = useRoute()
-
 </script>

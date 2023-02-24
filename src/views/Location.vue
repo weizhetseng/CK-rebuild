@@ -1,7 +1,14 @@
 <template>
     <pageBanner />
-    <div class="container">
-        <breadcrumb />
+    <div class="wrap">
+        <div class="container location">
+            <breadcrumb />
+            <div class="pageTitle">
+                <h2>營業據點</h2>
+                <p>Business base</p>
+            </div>
+
+        </div>
     </div>
 </template>
 

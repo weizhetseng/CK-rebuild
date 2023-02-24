@@ -19,14 +19,56 @@ a {
     text-decoration: none;
 }
 
+//背景層
+.wrap {
+    background: url("/src/assets/image/other/CHUEIKUN.png") no-repeat top;
+    background-position: right top -55px;
+    padding-top: 50px;
+}
+
+//麵包屑
 .breadcrumb {
     justify-content: flex-end;
     align-items: center;
     font-size: 20px;
     color: #A02C2C;
-    gap: 20px;
+    gap: 40px;
+
+    li {
+        position: relative;
+
+        a {
+            display: block;
+
+            img {
+                width: 20px;
+                height: 20px;
+                vertical-align: baseline;
+            }
+        }
+
+        &::after {
+            content: "";
+            background: url("/src/assets/image/other/bx-right-arrow-alt.png") no-repeat center;
+            background-size: contain;
+            display: block;
+            position: absolute;
+            width: 10px;
+            height: 20px;
+            top: 50%;
+            right: -25px;
+            transform: translateY(-50%);
+        }
+
+        &:last-child {
+            &::after {
+                display: none;
+            }
+        }
+    }
 }
 
+//頁面標題
 .pageTitle {
     h2 {
         font-size: 35px;
@@ -35,6 +77,7 @@ a {
     }
 }
 
+//頁面Banner
 .pageBanner {
-    margin-bottom: 100px;
+    margin-bottom: 50px;
 }

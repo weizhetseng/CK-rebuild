@@ -1,7 +1,9 @@
 <template>
     <pageBanner />
-    <div class="container">
-        <breadcrumb />
+    <div class="wrap">
+        <div class="container">
+            <breadcrumb />
+        </div>
     </div>
 </template>
 
