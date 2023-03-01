@@ -23,7 +23,11 @@ const router = createRouter({
       children: [
         {
           path: 'newsDetail/:id',
-          component: () => import('../views/NewsDetail.vue')
+          component: () => import('../views/NewsDetail.vue'),
+          meta: {
+            banner: "banner-news.jpg",
+            breadcrumb: ["最新消息"]
+          }
         },
       ],
       meta: {

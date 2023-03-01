@@ -1,15 +1,14 @@
 <template>
   <pageBanner />
   <div class="wrap">
-    <div class="container">
+    <div class="container about">
       <breadcrumb />
       <div class="pageTitle">
         <h2>關於垂坤</h2>
         <p>ABOUT US</p>
       </div>
-
-      <div class="row">
-        <div class="col-6 aboutText">
+      <div class="row aboutContent">
+        <div class="col-lg-6 aboutText">
           <h3>細火慢燉，精心烘培</h3>
           <p>
             垂坤食品位於苗栗苑裡市場旁，為在地深耕經營的肉乾肉鬆店，垂坤於民國74年成立，
@@ -27,13 +26,13 @@
             提供客戶最優質的服務。
           </p>
         </div>
-        <div class="col-6 aboutImg">
+        <div class="col-lg-6 aboutImg">
           <img class="img01" src="../assets/image/about/about02.jpg" alt="about02">
           <img class="img02" src="../assets/image/about/about01.jpg" alt="about01">
         </div>
       </div>
-      <div class="buttonArea">
-        <a href="#" onclick="history.go(-1)">返回上一頁</a>
+      <div class="btnGroup">
+        <a class="buttonStyle1" href="#" onclick="history.go(-1)"><span>返回上一頁</span></a>
       </div>
     </div>
   </div>
