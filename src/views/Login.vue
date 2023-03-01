@@ -31,7 +31,7 @@
                             </div>
                             <RouterLink to="/forgetPW">忘記密碼</RouterLink>
                         </div>
-                        <button type="submit">登入</button>
+                        <button class="buttonStyle1" type="submit"><span>登入</span></button>
                     </Form>
                 </div>
                 <div class="col-lg-6 registerForm">
@@ -122,7 +122,7 @@
                             <label for="termsCheckbox">我已閱讀並同意提供以上資料供垂坤連繫使用。</label>
                             <error-message name="termsCheckbox" class="invalid-feedback"></error-message>
                         </div>
-                        <button type="submit">下一步</button>
+                        <button class="buttonStyle1" type="submit"><span>下一步</span></button>
                     </Form>
                 </div>
             </div>

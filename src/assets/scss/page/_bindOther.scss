@@ -1,0 +1,22 @@
+.bindOther {
+    .bindType {
+        width: 60%;
+        margin: 0 auto;
+
+        .inputArea {
+            label {
+                width: 165px;
+
+                div {
+                    border: 1px solid #A02C2C;
+                    border-radius: 50%;
+                    padding: 8px;
+                }
+
+                p {
+                    width: 90px;
+                }
+            }
+        }
+    }
+}

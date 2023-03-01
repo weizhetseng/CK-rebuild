@@ -26,7 +26,7 @@
             </ul>
             <ul class="boxLink">
                 <li>
-                    <a href="#">
+                    <a href="#" data-bs-toggle="modal" data-bs-target="#scam2">
                         <img src="../assets/image/other/user-alert.png" alt="">
                         詐騙手法大公開
                     </a>
@@ -46,8 +46,12 @@
             </ul>
         </div>
     </nav>
+    <scamModal2 />
 </template>
 
 
+<script setup>
+import scamModal2 from './btn_scamModal2.vue';
 
+</script>
 

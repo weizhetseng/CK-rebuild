@@ -98,9 +98,7 @@ const router = createRouter({
       component: () => import('../views/ForgetPW.vue'),
       meta: {
         banner: "banner-member.jpg",
-        breadcrumb: [
-          "會員專區", "忘記密碼"
-        ]
+        breadcrumb: ["會員專區", "忘記密碼"]
       }
     },
     {

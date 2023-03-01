@@ -3,9 +3,11 @@
 @import "./base/mixin";
 
 //* layout
-@import "./layout/global";
 @import "./layout/header";
 @import "./layout/footer";
+
+//* module
+@import "./module/global";
 
 //* page
 @import "./page/login";
@@ -14,3 +16,6 @@
 @import "./page/register";
 @import "./page/phoenCaptcha";
 @import "./page/memberCenter";
+@import "./page/changePW";
+@import "./page/logout";
+@import "./page/bindOther";

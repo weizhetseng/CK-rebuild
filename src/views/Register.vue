@@ -101,9 +101,9 @@
                     </div>
                     <input type="text" name="" id="" placeholder="請輸入詳細地址">
                 </div>
-                <div>
-                    <button type="reset">清除</button>
-                    <button type="submit">送出</button>
+                <div class="btnGroup">
+                    <button class="buttonStyle2" type="reset"><span>清除</span></button>
+                    <button class="buttonStyle1" type="submit"><span>送出</span></button>
                 </div>
             </Form>
         </div>
