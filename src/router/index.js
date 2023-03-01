@@ -159,6 +159,15 @@ const router = createRouter({
             breadcrumb: ["會員專區", "綁定其他帳號"]
           },
         },
+        {
+          //會員登出
+          path: 'logout',
+          component: () => import('../views/Logout.vue'),
+          meta: {
+            banner: "banner-member.jpg",
+            breadcrumb: ["會員專區", "會員登出"]
+          },
+        },
 
       ]
     },
