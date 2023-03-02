@@ -1,1 +1,0 @@
-import{_ as s,a as t}from"./btn_pageBanner-e09996f1.js";import{o,c,b as a,a as e,F as r}from"./index-6add71c1.js";const _={class:"wrap"},n={class:"container"},f={__name:"ShoppingCart",setup(i){return(m,p)=>(o(),c(r,null,[a(s),e("div",_,[e("div",n,[a(t)])])],64))}};export{f as default};

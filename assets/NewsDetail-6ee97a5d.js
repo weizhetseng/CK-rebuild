@@ -1,1 +1,0 @@
-import{_ as s,o as t,c,a as e}from"./index-6add71c1.js";const o={},a={class:"wrap"},n=e("div",null,[e("h1",null,"This is newsDetail page")],-1),_=[n];function r(i,l){return t(),c("div",a,_)}const f=s(o,[["render",r]]);export{f as default};

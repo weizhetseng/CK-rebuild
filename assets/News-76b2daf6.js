@@ -1,1 +1,0 @@
-import{_ as s,a as t}from"./btn_pageBanner-e09996f1.js";import{o as c,c as o,b as a,a as e,F as _}from"./index-6add71c1.js";const r={class:"wrap"},n={class:"container"},f={__name:"News",setup(i){return(m,l)=>(c(),o(_,null,[a(s),e("div",r,[e("div",n,[a(t)])])],64))}};export{f as default};
