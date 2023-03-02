@@ -3,19 +3,29 @@
     <div class="wrap">
         <div class="container news">
             <breadcrumb />
-            <ul v-if="route.path === '/news'">
-                <li class="row" v-for="(item, index) in newsList" :key="index">
-                    <div class="col-6">
-                        <img :src="imageUrl(item.imgUrl)" alt="">
+            <div class="pageTitle">
+                <h2>最新消息</h2>
+                <p>HOT NEWS</p>
+            </div>
+            <div class="row">
+                <div v-if="route.path === '/news'">
+                    <ul class="col-8 newsList">
+                        <li class="row" v-for="(item, index) in newsList" :key="index">
+                            <div class="col-6">
+                                <img :src="imageUrl(item.imgUrl)" alt="">
+                            </div>
+                            <div class="col-6">
+                                <p class="date">{{ item.date }}</p>
+                                <p class="title">{{ item.title }}</p>
+                                <p class="content">{{ item.content }}</p>
+                                <RouterLink :to="`/news/newsDetail/${index}`">了解更多</RouterLink>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="col-3">
                     </div>
-                    <div class="col-6">
-                        {{ item.date }}
-                        {{ item.title }}
-                        {{ item.content }}
-                        <RouterLink :to="`/news/newsDetail/${index}`">了解更多</RouterLink>
-                    </div>
-                </li>
-            </ul>
+                </div>
+            </div>
             <RouterView />
         </div>
     </div>
