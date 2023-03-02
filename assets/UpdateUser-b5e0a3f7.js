@@ -1,1 +1,0 @@
-import{_ as e}from"./btn_memberList-a171bffe.js";import{o,c as a,a as s,b as c}from"./index-6e369f8f.js";const t={class:"row"},_={class:"col-3"},r=s("div",{class:"col-9"},null,-1),p={__name:"UpdateUser",setup(n){return(l,d)=>(o(),a("div",t,[s("div",_,[c(e)]),r]))}};export{p as default};
