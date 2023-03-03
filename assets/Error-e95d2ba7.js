@@ -1,1 +1,0 @@
-import{_ as e,o,c as s,a as c}from"./index-eec4ba81.js";const t={},r=c("h1",null,"This is 404 page",-1),n=[r];function a(_,i){return o(),s("div",null,n)}const d=e(t,[["render",a]]);export{d as default};
