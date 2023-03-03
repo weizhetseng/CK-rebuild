@@ -7,22 +7,35 @@
                 <h2>最新消息</h2>
                 <p>HOT NEWS</p>
             </div>
-            <div class="row">
-                <div v-if="route.path === '/news'">
-                    <ul class="col-8 newsList">
+            <div v-if="route.path === '/news'">
+                <div class="row">
+                    <ul class="col-lg-9 newsList">
                         <li class="row" v-for="(item, index) in newsList" :key="index">
-                            <div class="col-6">
-                                <img :src="imageUrl(item.imgUrl)" alt="">
+                            <div class="col-lg-6">
+                                <img class="newsImg" :src="imageUrl(item.imgUrl)" alt="">
                             </div>
-                            <div class="col-6">
+                            <div class="col-lg-6">
                                 <p class="date">{{ item.date }}</p>
-                                <p class="title">{{ item.title }}</p>
+                                <div class="title">
+                                    <span>NEWS</span>
+                                    <h3>{{ item.title }}</h3>
+                                </div>
                                 <p class="content">{{ item.content }}</p>
-                                <RouterLink :to="`/news/newsDetail/${index}`">了解更多</RouterLink>
+                                <RouterLink :to="`/news/newsDetail/${index}`">
+                                    <div>
+                                        了解更多
+                                        <img src="../assets/image/other/right.png" alt="">
+                                    </div>
+                                </RouterLink>
                             </div>
                         </li>
                     </ul>
                     <div class="col-3">
+                        <ul class="asideList">
+                            <li v-for="item in asideList" :key="item.title">
+                                <RouterLink :to="item.url">{{ item.title }}</RouterLink>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>
@@ -62,6 +75,36 @@ const newsList = [
         imgUrl: "news03.png",
         title: "假標題假標題假標題假標題假標題",
         content: "假內容假內容假內容假內容假內容假內容假內容假內容假內容假內容假內容假內容假內容假內容假內容假內容假內容假內容假內容假內容假內容假內容",
+    },
+]
+const asideList = [
+    {
+        url: '#',
+        title: '最新消息'
+    },
+    {
+        url: '#',
+        title: '營業時間'
+    },
+    {
+        url: '#',
+        title: '食品檢驗報告'
+    },
+    {
+        url: '#',
+        title: '食品工廠登記字號'
+    },
+    {
+        url: '#',
+        title: '食品業者登記字號'
+    },
+    {
+        url: '#',
+        title: '食品責任保險單'
+    },
+    {
+        url: '#',
+        title: '定型化契約'
     },
 ]
 

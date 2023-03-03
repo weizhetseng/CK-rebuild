@@ -4,15 +4,12 @@
     }
 
     .newsList {
+        margin-top: 60px;
 
         li {
             margin-bottom: 80px;
 
-            &:last-child {
-                margin-bottom: 0;
-            }
-
-            img {
+            .newsImg {
                 width: 100%;
                 border-radius: 30px;
             }
@@ -22,9 +19,25 @@
             }
 
             .title {
-                font-size: 20px;
-                font-weight: bold;
                 margin-bottom: 15px;
+                display: flex;
+                align-items: baseline;
+                gap: 15px;
+
+                span {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 99px;
+                    color: #fff;
+                    background: #A02C2C;
+                    border-radius: 0 30px 0 30px;
+                }
+
+                h3 {
+                    font-size: 20px;
+                    font-weight: bold;
+                }
             }
 
             .content {
@@ -32,12 +45,87 @@
             }
 
             a {
-                display: block;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
                 width: 170px;
-                padding: 5px;
+                padding: 5px 40px;
                 background: #fff;
                 box-shadow: 1px 1px 1px 2px #F6EEDD;
+                color: #A02C2C;
+                position: relative;
+
+                div {
+                    position: relative;
+                    z-index: 1;
+                }
+
+                &::after {
+                    content: "";
+                    display: block;
+                    position: absolute;
+                    width: 0%;
+                    height: 100%;
+                    background: #A02C2C;
+                    top: 0;
+                    left: 0;
+                    transition: 0.5s ease;
+                }
+
+                img {
+                    width: 10px;
+                    height: 10px;
+                }
+
+                &:hover {
+                    color: #fff;
+
+                    &::after {
+                        width: 100%;
+                    }
+                }
             }
+        }
+    }
+
+    .asideList {
+        background: #A02C2C;
+        color: #fff;
+
+        li {
+            padding: 10px 20px;
+
+            a {
+                display: block;
+                color: #fff;
+                font-size: 20px;
+            }
+
+            &:hover {
+                background: #F6EEDD;
+
+                a {
+                    color: #A02C2C;
+                }
+            }
+        }
+    }
+
+    @include lg {
+        .newsList {
+            margin-top: 0;
+
+            li {
+                margin-bottom: 40px;
+            }
+
+            .newsImg {
+                margin-bottom: 20px;
+            }
+        }
+
+        .asideList {
+            display: none;
         }
     }
 }

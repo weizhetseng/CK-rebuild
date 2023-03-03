@@ -15,14 +15,14 @@
                     </Field>
                     <error-message name="userID" class="invalid-feedback"></error-message>
                 </div>
-                <div>
-                    <button type="reset">清除</button>
-                    <button type="submit">送出</button>
+                <div class="btnGroup">
+                    <button class="buttonStyle2" type="reset"><span>清除</span></button>
+                    <button class="buttonStyle1" type="submit"><span>送出</span></button>
                 </div>
             </Form>
             <div class="success" v-else>
                 <h3>您的新密碼已經發送到您的手機，請查看訊息</h3>
-                <RouterLink to="">返回登入頁</RouterLink>
+                <RouterLink class="buttonStyle1" to="/login"><span>返回登入頁</span></RouterLink>
             </div>
         </div>
     </div>

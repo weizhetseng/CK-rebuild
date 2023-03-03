@@ -1,22 +1,24 @@
 <template>
     <pageBanner />
-    <div class="container memberCenter">
-        <breadcrumb />
-        <div class="pageTitle">
-            <h2>會員專區</h2>
-            <p>Members Only</p>
+    <div class="wrap">
+        <div class="container memberCenter">
+            <breadcrumb />
+            <div class="pageTitle">
+                <h2>會員專區</h2>
+                <p>Members Only</p>
+            </div>
+            <div v-if="route.path === '/memberCenter'">
+                <h3><span>OOO</span>會員您好!</h3>
+                <ul class="memberLink">
+                    <li v-for="item in memberLink" :key="item.url">
+                        <RouterLink class="buttonStyle2" :to="item.url">
+                            <span>{{ item.title }}</span>
+                        </RouterLink>
+                    </li>
+                </ul>
+            </div>
+            <RouterView />
         </div>
-        <div v-if="route.path === '/memberCenter'">
-            <h3><span>OOO</span>會員您好!</h3>
-            <ul class="memberLink">
-                <li v-for="item in memberLink" :key="item.url">
-                    <RouterLink :to="item.url">
-                        {{ item.title }}
-                    </RouterLink>
-                </li>
-            </ul>
-        </div>
-        <RouterView />
     </div>
 </template>
 

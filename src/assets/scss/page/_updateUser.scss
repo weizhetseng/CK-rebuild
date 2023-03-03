@@ -1,0 +1,31 @@
+.updateUser {
+    form {
+        width: 60%;
+        margin: 0 auto;
+
+        .inputArea {
+            margin-bottom: 24px;
+        }
+
+        .btnGroup {
+            margin-top: 100px;
+        }
+    }
+
+    .successMsg {
+        text-align: center;
+
+        p {
+            margin-bottom: 80px;
+            font-size: 30px;
+            font-weight: bold;
+            color: #A02C2C;
+        }
+    }
+
+    @include lg {
+        form {
+            width: 100%;
+        }
+    }
+}

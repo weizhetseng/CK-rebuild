@@ -107,6 +107,17 @@ a {
     display: flex;
     position: relative;
 
+    //驗證碼按鈕
+    .captchaBtn {
+        position: absolute;
+        right: 0;
+        color: #fff;
+        border: none;
+        border-radius: 0 30px 0 30px;
+        background: #A02C2C;
+        padding: 0 15px;
+    }
+
 
     .invalid-feedback {
         position: absolute;
@@ -170,11 +181,12 @@ a {
         }
     }
 
-
-
-
     @include sm {
         flex-direction: column;
+
+        .captchaBtn {
+            bottom: 5px;
+        }
 
 
         .selectGroup {
@@ -252,7 +264,7 @@ a {
 //彈出視窗(導覽列詐騙)
 #scam2 {
     .modal-content {
-        border-radius: none;
+        border-radius: 0;
         border-top: 10px solid #A02C2C;
         border-bottom: 10px solid #A02C2C;
     }
@@ -270,7 +282,8 @@ a {
 
     .modal-body {
         font-size: 20px;
-        padding-top: 0;
+        padding: 0 30px 30px;
+        line-height: 2;
     }
 }
 
@@ -337,6 +350,10 @@ a {
             font-size: 19px;
             color: #000000;
         }
+    }
+
+    @include lg {
+        display: none;
     }
 }
 

@@ -3,7 +3,7 @@
         <div class="col-3">
             <memberList />
         </div>
-        <div class="col-9">
+        <div class="col-lg-9">
             <Form v-slot="{ errors }" v-if="!changeStatus" @submit="changePW()">
                 <div class="inputArea">
                     <label for="oldPW"><span>*</span>舊密碼</label>
@@ -26,14 +26,16 @@
                     </Field>
                     <error-message name="newPW2" class="invalid-feedback"></error-message>
                 </div>
-                <div>
-                    <button type="reset">清除</button>
-                    <button type="submit">送出</button>
+                <div class="btnGroup">
+                    <button class="buttonStyle2" type="reset"><span>清除</span></button>
+                    <button class="buttonStyle1" type="submit"><span>送出</span></button>
                 </div>
             </Form>
             <div class="successMsg" v-else>
                 <p>修改密碼成功</p>
-                <button type="button">返回上一頁</button>
+                <div class="btnGroup">
+                    <button class="buttonStyle1" type="button"><span>返回上一頁</span></button>
+                </div>
             </div>
         </div>
     </div>

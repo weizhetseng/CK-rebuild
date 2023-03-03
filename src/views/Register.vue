@@ -14,6 +14,7 @@
                     <Field id="phone" name="phone" type="text" label="手機號碼" :class="{ 'is-invalid': errors['phone'] }"
                         placeholder="請輸入手機號碼" rules="required">
                     </Field>
+                    <button class="captchaBtn" type="button">發送驗證碼</button>
                     <error-message name="phone" class="invalid-feedback"></error-message>
                 </div>
                 <div class="inputArea">
@@ -21,6 +22,7 @@
                     <Field id="phoneCode" name="phoneCode" type="text" label="驗證碼"
                         :class="{ 'is-invalid': errors['phoneCode'] }" placeholder="請輸入手機驗證碼" rules="required">
                     </Field>
+                    <button class="captchaBtn" type="button">重發驗證碼(59)</button>
                     <error-message name="phoneCode" class="invalid-feedback"></error-message>
                 </div>
                 <div class="inputArea">
@@ -28,6 +30,7 @@
                     <Field id="email" name="email" type="text" label="電子信箱" :class="{ 'is-invalid': errors['email'] }"
                         placeholder="請輸入Email" rules="required">
                     </Field>
+                    <button class="captchaBtn" type="button">發送驗證碼</button>
                     <error-message name="email" class="invalid-feedback"></error-message>
                 </div>
                 <div class="inputArea">
@@ -35,6 +38,7 @@
                     <Field id="emailCode" name="emailCode" type="text" label="驗證碼"
                         :class="{ 'is-invalid': errors['emailCode'] }" placeholder="請輸入Email信驗證碼" rules="required">
                     </Field>
+                    <button class="captchaBtn" type="button">重發驗證碼(59)</button>
                     <error-message name="emailCode" class="invalid-feedback"></error-message>
                 </div>
                 <div class="inputArea">

@@ -3,7 +3,7 @@
         <div class="col-3">
             <memberList />
         </div>
-        <div class="col-9">
+        <div class="col-lg-9">
             <ul class="bindType">
                 <li class="inputArea">
                     <label>

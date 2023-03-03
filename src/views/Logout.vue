@@ -3,10 +3,12 @@
         <div class="col-3">
             <memberList />
         </div>
-        <div class="col-9">
+        <div class="col-lg-9">
             <div class="successMsg">
                 <p>會員已登出</p>
-                <RouterLink to="/">返回首頁</RouterLink>
+                <div class="btnGroup">
+                    <RouterLink class="buttonStyle1" to="/"><span>返回首頁</span></RouterLink>
+                </div>
             </div>
         </div>
     </div>

@@ -1,5 +1,5 @@
 <template>
-    <div class="modal fade" id="scam1" tabindex="-1" aria-labelledby="scam1" aria-hidden="true">
+    <div class="modal fade" id="scam1" tabindex="-1" aria-labelledby="scam1" aria-hidden="true" ref="scam1">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header">
@@ -19,3 +19,24 @@
         </div>
     </div>
 </template>
+<script setup>
+import { onMounted, ref } from 'vue';
+import Modal from 'bootstrap/js/dist/modal';
+
+const scam1 = ref(null)
+const modal = ref()
+
+function showModal() {
+    modal.value.show()
+}
+
+defineExpose({
+    showModal
+})
+
+onMounted(() => {
+    modal.value = new Modal(scam1.value)
+})
+
+
+</script>
