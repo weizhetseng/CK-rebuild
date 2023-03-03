@@ -1,1 +1,0 @@
-import{_ as s,a as t}from"./btn_pageBanner-7249d0a5.js";import{o as c,c as o,b as a,a as e,F as r}from"./index-a4451580.js";const _={class:"wrap"},n={class:"container"},f={__name:"Product",setup(i){return(m,d)=>(c(),o(r,null,[a(s),e("div",_,[e("div",n,[a(t)])])],64))}};export{f as default};
