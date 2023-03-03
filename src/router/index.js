@@ -134,6 +134,16 @@ const router = createRouter({
             banner: "banner-member.jpg",
             breadcrumb: ["會員專區", "查詢訂單資料"]
           },
+          children: [
+            {
+              path: 'orderDetail/:id',
+              component: () => import('../views/OrderDetail.vue'),
+              meta: {
+                banner: "banner-member.jpg",
+                breadcrumb: ["會員專區", "查詢訂單資料"]
+              },
+            }
+          ]
         },
         {
           //修改資料
