@@ -357,6 +357,111 @@ a {
     }
 }
 
+//產品列表
+.productList {
+    div {
+        background: #A02C2C;
+        padding: 20px;
+        position: relative;
+        border-radius: 0 30px 0 30px;
+        box-shadow: 1px 1px 0px 3px #F7EEDD;
+        margin-bottom: 30px;
+
+        label {
+            position: absolute;
+            top: 50%;
+            right: 0;
+            background: #fff;
+            width: 20%;
+            height: 100%;
+            transform: translateY(-50%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 0 30px 0 30px;
+        }
+
+        input {
+            background: transparent;
+            border: none;
+            border-bottom: 1px solid #fff;
+            outline: none;
+
+            &::placeholder {
+                color: #fff;
+            }
+        }
+    }
+
+    li {
+        margin-bottom: 10px;
+        position: relative;
+        padding: 0 20px;
+
+        &::before {
+            content: "";
+            position: absolute;
+            display: block;
+            width: 10px;
+            height: 10px;
+            background: #A02C2C;
+            transform: rotate(45deg) translateY(-50%);
+            top: 50%;
+            right: 45px;
+            transition: 0.5s;
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            display: block;
+            width: 45px;
+            height: 2px;
+            background: #A02C2C;
+            top: 52%;
+            right: 0;
+            transition: 0.5s;
+        }
+
+        &:hover {
+            &::before {
+                right: 37px;
+            }
+
+            &::after {
+                width: 37px;
+            }
+
+            a {
+                color: #A02C2C;
+            }
+        }
+
+        &.active {
+            &::before {
+                right: 37px;
+            }
+
+            &::after {
+                width: 37px;
+            }
+
+            a {
+                color: #A02C2C;
+            }
+        }
+
+        a {
+            font-size: 18px;
+            color: #000000;
+        }
+    }
+
+    @include lg {
+        display: none;
+    }
+}
+
 //按鈕樣式
 .buttonStyle1 {
     display: block;

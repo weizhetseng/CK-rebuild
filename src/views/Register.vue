@@ -14,7 +14,7 @@
                     <Field id="phone" name="phone" type="text" label="手機號碼" :class="{ 'is-invalid': errors['phone'] }"
                         placeholder="請輸入手機號碼" rules="required">
                     </Field>
-                    <button class="captchaBtn" type="button">發送驗證碼</button>
+                    <button class="captchaBtn" type="button" @click="sendCaptcha()" :disabled="phoneCaptcha">發送驗證碼</button>
                     <error-message name="phone" class="invalid-feedback"></error-message>
                 </div>
                 <div class="inputArea">
@@ -22,7 +22,8 @@
                     <Field id="phoneCode" name="phoneCode" type="text" label="驗證碼"
                         :class="{ 'is-invalid': errors['phoneCode'] }" placeholder="請輸入手機驗證碼" rules="required">
                     </Field>
-                    <button class="captchaBtn" type="button">重發驗證碼(59)</button>
+                    <button class="captchaBtn" type="button" :disabled="!phoneCaptcha"
+                        @click="resendCaptcha()">重發驗證碼(59)</button>
                     <error-message name="phoneCode" class="invalid-feedback"></error-message>
                 </div>
                 <div class="inputArea">
@@ -38,7 +39,7 @@
                     <Field id="emailCode" name="emailCode" type="text" label="驗證碼"
                         :class="{ 'is-invalid': errors['emailCode'] }" placeholder="請輸入Email信驗證碼" rules="required">
                     </Field>
-                    <button class="captchaBtn" type="button">重發驗證碼(59)</button>
+                    <button class="captchaBtn" type="button" :disabled="!emailCaptcha">重發驗證碼(59)</button>
                     <error-message name="emailCode" class="invalid-feedback"></error-message>
                 </div>
                 <div class="inputArea">
@@ -116,6 +117,19 @@
 <script setup>
 import pageBanner from '../components/btn_pageBanner.vue'
 import breadcrumb from '../components/btn_breadcrumb.vue'
+import { ref } from 'vue';
+const phoneCaptcha = ref(false)
+const emailCaptcha = ref(false)
+
+
+function sendCaptcha() {
+
+}
+
+function resendCaptcha() {
+}
 
 
 </script>
+
+<!-- 需新增按鈕disable的class 按下發送驗證碼 將發送驗證碼按鈕切換成disable狀態 發送成功 重發驗證碼開始倒數 倒數結束重發驗證碼按鈕切換成!disable狀態 -->

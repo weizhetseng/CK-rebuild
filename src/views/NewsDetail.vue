@@ -15,7 +15,7 @@
             </div>
         </div>
         <div class="btnGroup">
-            <a class="buttonStyle1" href="#" onclick="history.go(-1)"><span>返回列表</span></a>
+            <RouterLink to="/news" class="buttonStyle1"><span>返回列表</span></RouterLink>
         </div>
     </div>
 </template>
