@@ -62,8 +62,18 @@ const router = createRouter({
           component: () => import('../views/ProductItem.vue'),
           meta: {
             banner: "banner-shopping.jpg",
-            breadcrumb: ["線上購物"]
+            breadcrumb: ["線上購物", "OO系列"]
           },
+          children: [
+            {
+              path: 'productDetail',
+              component: () => import('../views/ProductDetail.vue'),
+              meta: {
+                banner: "banner-shopping.jpg",
+                breadcrumb: ["線上購物", "OOOOO"]
+              },
+            }
+          ]
         },
         {
           //訂購方式

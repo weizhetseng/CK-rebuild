@@ -12,18 +12,15 @@
                     <productList />
                 </div>
                 <div class="col-lg-9">
-                    <div
-                        :class="{ 'space': route.path.split('/')[2] === 'orderMethod1' || route.path.split('/')[2] === 'orderMethod2' || route.path.split('/')[2] === 'orderMethod3' }">
-                        <ul class="methodList"
-                            v-if="route.path.split('/')[2] === 'orderMethod1' || route.path.split('/')[2] === 'orderMethod2' || route.path.split('/')[2] === 'orderMethod3'">
-                            <li v-for="item in methodList" :key="item.title">
-                                <RouterLink :class="{ active: route.path === item.link }" :to="item.link">
-                                    <p>{{ item.title }}</p>
-                                </RouterLink>
-                            </li>
-                        </ul>
-                        <RouterView />
-                    </div>
+                    <ul class="methodList"
+                        v-if="route.path.split('/')[2] === 'orderMethod1' || route.path.split('/')[2] === 'orderMethod2' || route.path.split('/')[2] === 'orderMethod3'">
+                        <li v-for="item in methodList" :key="item.title">
+                            <RouterLink :class="{ active: route.path === item.link }" :to="item.link">
+                                <p>{{ item.title }}</p>
+                            </RouterLink>
+                        </li>
+                    </ul>
+                    <RouterView />
                 </div>
             </div>
         </div>

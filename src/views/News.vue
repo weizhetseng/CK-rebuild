@@ -24,7 +24,6 @@
                                 <RouterLink :to="`/news/newsDetail/${index}`">
                                     <div>
                                         了解更多
-                                        <img src="../assets/image/other/right.png" alt="">
                                     </div>
                                 </RouterLink>
                             </div>

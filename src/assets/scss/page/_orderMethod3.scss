@@ -1,4 +1,6 @@
 .orderMethod3 {
+    width: 80%;
+    margin: 0 auto;
     border-bottom: 1px solid #707070;
     padding-bottom: 60px;
     margin-bottom: 60px;
@@ -16,5 +18,9 @@
         color: #A02C2C;
         font-size: 20px;
         font-weight: bold;
+    }
+
+    @include lg {
+        width: 100%;
     }
 }

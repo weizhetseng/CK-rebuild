@@ -80,7 +80,29 @@ a {
 
 //頁面Banner
 .pageBanner {
-    margin-bottom: 50px;
+
+    .bannerImg {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .col-lg-2 {
+        display: flex;
+        align-items: center;
+    }
+
+    p {
+        font-size: 20px;
+        font-weight: bold;
+        color: #A02C2C;
+    }
+
+    @include lg {
+        .col-lg-2 {
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+    }
 }
 
 
@@ -490,7 +512,7 @@ a {
     span {
         position: relative;
         display: block;
-        padding: 30px 80px;
+        padding: 20px 60px;
 
         &::before {
             content: "";
@@ -554,7 +576,7 @@ a {
     span {
         position: relative;
         display: block;
-        padding: 30px 80px;
+        padding: 20px 60px;
 
         &::before {
             content: "";

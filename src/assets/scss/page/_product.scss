@@ -5,11 +5,9 @@
         margin-bottom: 45px;
     }
 
-    .space {
-        padding: 0 100px;
-    }
-
     .methodList {
+        width: 80%;
+        margin: 0 auto;
         display: flex;
         justify-content: space-between;
         text-align: center;
@@ -41,6 +39,7 @@
 
                 p {
                     position: relative;
+                    z-index: 1;
                 }
 
                 &::before {
@@ -97,8 +96,8 @@
     }
 
     @include lg {
-        .space {
-            padding: 0;
+        .methodList {
+            width: 100%;
         }
     }
 }
