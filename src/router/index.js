@@ -54,7 +54,45 @@ const router = createRouter({
       meta: {
         banner: "banner-shopping.jpg",
         breadcrumb: ["線上購物"]
-      }
+      },
+      children: [
+        {
+          //產品頁
+          path: 'productItem/:id',
+          component: () => import('../views/ProductItem.vue'),
+          meta: {
+            banner: "banner-shopping.jpg",
+            breadcrumb: ["線上購物"]
+          },
+        },
+        {
+          //訂購方式
+          path: 'orderMethod1',
+          component: () => import('../views/OrderMethod1.vue'),
+          meta: {
+            banner: "banner-shopping.jpg",
+            breadcrumb: ["線上購物"]
+          },
+        },
+        {
+          //付款方式
+          path: 'orderMethod2',
+          component: () => import('../views/OrderMethod2.vue'),
+          meta: {
+            banner: "banner-shopping.jpg",
+            breadcrumb: ["線上購物", "付款方式"]
+          },
+        },
+        {
+          //訂購須知
+          path: 'orderMethod3',
+          component: () => import('../views/OrderMethod3.vue'),
+          meta: {
+            banner: "banner-shopping.jpg",
+            breadcrumb: ["線上購物", "付款方式"]
+          },
+        },
+      ]
     },
     {
       //營業據點

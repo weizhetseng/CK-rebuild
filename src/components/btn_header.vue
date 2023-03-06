@@ -15,7 +15,7 @@
                     <RouterLink to="/about">關於我們</RouterLink>
                 </li>
                 <li>
-                    <RouterLink to="/product">線上購物</RouterLink>
+                    <RouterLink to="/product/orderMethod1">線上購物</RouterLink>
                 </li>
                 <li>
                     <RouterLink to="/location">營業據點</RouterLink>
