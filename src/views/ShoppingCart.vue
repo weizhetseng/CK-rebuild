@@ -38,11 +38,13 @@
                                     </div>
                                 </div>
                             </td>
-                            <td></td>
+                            <td>
+                                <calculate />
+                            </td>
                             <td>1400元</td>
                             <td class="calcPrice">1400元</td>
                             <td>
-                                <button>
+                                <button type="button" class="delete">
                                     <img src="../assets/image/other/trashCan.png" alt="">
                                     刪除
                                 </button>
@@ -97,4 +99,5 @@
 <script setup>
 import breadcrumb from '../components/btn_breadcrumb.vue'
 import pageBanner from '../components/btn_pageBanner.vue'
+import calculate from '../components/btn_calculate.vue';
 </script>
